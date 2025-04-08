@@ -1,21 +1,19 @@
 import React from "react";
 import { TextField, Button, Typography, Paper, Box } from "@mui/material";
 import { useAuth } from "../context/AuthContext";
-import BusinessImage from "../assets/business-decisions.svg";
 import "../styles/App.css";
-import { motion } from "framer-motion";
-import { toast } from "react-toastify";
+import { motion } from "framer-motion"; 
+import { toast } from "react-toastify"; 
+
+// ✅ Replace with your new logo
+import LogoImage from "../assets/ipo-logo.png";
 
 const LoginPage = () => {
   const { login } = useAuth();
 
   const handleLogin = () => {
-    toast.success("Login successful! 🎉", { autoClose: 2500 });
-
-    // ✅ Delay login logic to allow toast to render properly
-    setTimeout(() => {
-      login();
-    }, 100); // Short delay is enough to prevent error
+    login();
+    toast.success("Login successful! 🎉");
   };
 
   return (
@@ -25,9 +23,9 @@ const LoginPage = () => {
       transition={{ duration: 0.6 }}
     >
       <Box className="login-container">
-        {/* Left Side - Welcome & Image */}
+        {/* Left Side - Logo & Text */}
         <Box className="login-left">
-          <img src={BusinessImage} alt="Business" className="login-image-large" />
+          <img src={LogoImage} alt="IPO Advisory Logo" className="login-image-large" />
           <Typography variant="h4" className="welcome-heading">
             Welcome to the IPO Advisory Portal
           </Typography>

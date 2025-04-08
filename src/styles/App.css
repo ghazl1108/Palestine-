@@ -23,7 +23,7 @@ body, html, #root {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: transparent;
+  background: #1c1f26; /* Darker background */
 }
 
 .login-image-large {
@@ -35,12 +35,12 @@ body, html, #root {
 .welcome-heading {
   font-size: 2rem;
   font-weight: bold;
-  color: #1a202c;
+  color: #add8e6; /* Light blue */
   margin-bottom: 10px;
 }
 
 .welcome-text {
-  color: #4a5568;
+  color: #add8e6; /* Light blue */
   font-size: 1rem;
   max-width: 400px;
   line-height: 1.5;
@@ -99,83 +99,8 @@ button.MuiButton-root:hover {
   .welcome-text {
     font-size: 0.95rem;
   }
-  /* ============ Dashboard Styles ============ */
-
-.dashboard-container {
-  padding: 3rem;
-  background-color: #f7f9fc;
-  min-height: 100vh;
 }
 
-.dashboard-title {
-  text-align: center;
-  font-weight: bold;
-  color: #1a202c;
-}
-
-.dashboard-subtext {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #4a5568;
-}
-
-.dashboard-card {
-  padding: 1.5rem;
-  border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-}
-/* Dashboard Page */
-.dashboard-container {
-  padding: 3rem 2rem;
-  background: linear-gradient(to right, #f4f7f9, #e0ecf3);
-  min-height: 100vh;
-}
-
-.dashboard-title {
-  text-align: center;
-  font-weight: 700;
-  color: #1a202c;
-  margin-bottom: 10px;
-}
-
-.dashboard-subtitle {
-  text-align: center;
-  color: #4a5568;
-  margin-bottom: 30px;
-}
-
-.dashboard-grid {
-  margin-top: 20px;
-}
-
-.dashboard-card {
-  padding: 1.5rem;
-  border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  text-align: center;
-}
-/* Dashboard styles */
-.dashboard-container {
-  padding: 2rem;
-  background-color: #f9fbfd;
-  min-height: 100vh;
-}
-
-.dashboard-title {
-  font-weight: 700;
-  color: #1a202c;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.dashboard-card {
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  background-color: #ffffff;
-}
 /* Dashboard Layout */
 .dashboard-container {
   padding: 2rem;
@@ -200,20 +125,17 @@ button.MuiButton-root:hover {
 .kpi-card {
   text-align: center;
 }
-.navbar {
-  background-color: #1a237e; /* Deep Indigo */
-}
 
-.navbar-title {
-  font-weight: bold;
-}
 /* Sticky Navbar */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #ffffff;
+  background-color: #1a237e; /* Deep Indigo */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+.navbar-title {
+  font-weight: bold;
+  color: white;
 }
