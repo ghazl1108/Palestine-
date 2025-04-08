@@ -8,8 +8,8 @@ const Navbar = () => {
   const { logout } = useAuth();
 
   const handleLogout = () => {
-    logout(); // Perform logout logic
-    toast.info("Logged out successfully!"); // ✅ Show logout toast
+    logout(); // 🔐 Perform logout logic
+    toast.info("You have been logged out."); // ✅ Show logout toast
   };
 
   return (
@@ -18,9 +18,21 @@ const Navbar = () => {
         <Typography variant="h6" style={{ flexGrow: 1 }}>
           IPO Advisory
         </Typography>
-        <Link to="/dashboard" style={{ color: "white", marginRight: "1rem", textDecoration: "none" }}>Dashboard</Link>
-        <Link to="/upload" style={{ color: "white", marginRight: "1rem", textDecoration: "none" }}>Upload</Link>
-        <Button color="inherit" onClick={handleLogout}>Logout</Button>
+        <Link
+          to="/dashboard"
+          style={{ color: "white", marginRight: "1rem", textDecoration: "none" }}
+        >
+          Dashboard
+        </Link>
+        <Link
+          to="/upload"
+          style={{ color: "white", marginRight: "1rem", textDecoration: "none" }}
+        >
+          Upload
+        </Link>
+        <Button color="inherit" onClick={handleLogout}>
+          Logout
+        </Button>
       </Toolbar>
     </AppBar>
   );

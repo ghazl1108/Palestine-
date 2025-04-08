@@ -3,13 +3,19 @@ import { TextField, Button, Typography, Paper, Box } from "@mui/material";
 import { useAuth } from "../context/AuthContext";
 import BusinessImage from "../assets/business-decisions.svg";
 import "../styles/App.css";
-import { motion } from "framer-motion"; // ✅ Import Framer Motion
+import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const { login } = useAuth();
 
   const handleLogin = () => {
-    login();
+    toast.success("Login successful! 🎉", { autoClose: 2500 });
+
+    // ✅ Delay login logic to allow toast to render properly
+    setTimeout(() => {
+      login();
+    }, 100); // Short delay is enough to prevent error
   };
 
   return (

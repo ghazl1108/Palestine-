@@ -6,8 +6,8 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
-import { ToastContainer } from "react-toastify"; // ✅ Import ToastContainer
-import "react-toastify/dist/ReactToastify.css"; // ✅ Import Toast CSS
+import { ToastContainer } from "react-toastify"; // ✅ Toast container
+import "react-toastify/dist/ReactToastify.css"; // ✅ Toast styles
 
 import { useAuth } from "./context/AuthContext";
 import LoginPage from "./pages/LoginPage";
@@ -16,15 +16,20 @@ import UploadPage from "./pages/UploadPage";
 import Navbar from "./components/Navbar";
 import "./styles/App.css";
 
-// 🔁 Wrapper to handle Navbar visibility using location
+// 🔁 Component to manage navbar visibility and routing
 const AppContent = () => {
   const { isLoggedIn } = useAuth();
   const location = useLocation();
 
   return (
     <>
+      {/* Show Navbar only when not on login page */}
       {location.pathname !== "/" && <Navbar />}
 
+      {/* Toast notifications */}
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
+
+      {/* Routes */}
       <Routes>
         <Route
           path="/"
@@ -39,9 +44,6 @@ const AppContent = () => {
           element={isLoggedIn ? <UploadPage /> : <Navigate to="/" />}
         />
       </Routes>
-
-      {/* ✅ Toast container for alerts */}
-      <ToastContainer position="top-right" autoClose={3000} />
     </>
   );
 };
